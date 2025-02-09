@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Loading Screen (Hidden by Default) -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <h1>Welcome!</h1>
+<p id="welcome-message"></p>
+    <h2>Pick a Mode</h2>
+    <a href="easy.html"><button onclick="fadeOutAndNavigate(event, 'easy.html')">Easy Mode</button></a>
+    <a href="word.html"><button onclick="fadeOutAndNavigate(event, 'word.html')">Normal Mode</button></a>
+    <a href="hardmode.html"><button onclick="fadeOutAndNavigate(event, 'hardmode.html')">Hard Mode</button></a>
+    <a href="difficult.html"><button class="difficult-mode" onclick="fadeOutAndNavigate2(event, 'difficult.html')">Difficult Mode</button></a>
+    <h3>Achievements:</h3>
+    
+    <h3>Words Corrected:</h3>
+    
+    <h3>Play Time Count: N/A</h3>
+    
+    <h3>Best Streak:</h3>
+
+    <script src="main.js"></script>
+</body>
+</html>

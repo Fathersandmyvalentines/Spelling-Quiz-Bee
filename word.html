@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spelling Bee Quiz</title>
+    <link rel="stylesheet" href="word.css">
+</head>
+<body>
+
+    <h1>Spelling Bee Quiz <h4 class="streak">🔥 0</h4></h1>
+    <h3 class="normal-mode">Normal mode</h3>
+    <p>Spell the word correctly before time runs out!</p>
+    <h2 id="word-display">Word: ???</h2>
+
+    <div id="word-box"></div>
+    
+    <p>Time Left: <span id="timer">20</span> seconds</p>
+
+    <div class="keyboard" id="keyboard"></div>
+
+    <div style="margin-top: 10px;">
+        <button onclick="backspace()">⬅️ Backspace</button>
+        <button onclick="submitWord()">✔️ Submit</button>
+        <button onclick="speakWord()">🔊 Listen</button>
+    </div>
+
+    <script src="word.js"></script>
+
+</body>
+</html>

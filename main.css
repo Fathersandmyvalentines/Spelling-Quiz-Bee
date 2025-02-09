@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px;
+}
+
+.glitch-body {
+animation: glitch-body 0.05s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite;
+}
+
+@keyframes glitch-body {
+0% {
+transform: translate(0, 0) skew(0, 0);
+}
+20% {
+transform: translate(10px, 5px) skew(5deg, 2deg);
+}
+40% {
+transform: translate(-15px, -10px) skew(-3deg, -5deg);
+}
+60% {
+transform: translate(20px, 15px) skew(2deg, 3deg);
+}
+80% {
+transform: translate(-10px, -20px) skew(-5deg, -2deg);
+}
+100% {
+transform: translate(0, 0) skew(0, 0);
+}
+}
+
+body.glitch-body {
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+background-size: 400px 400px;
+animation: glitch-body 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite;
+}
+
+/* Loading Screen */
+#loading-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Loader Animation */
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Buttons */
+button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Fade Out Animation */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Different colors for each mode */
+button:nth-child(1) { background: #4CAF50; color: white; } /* Easy Mode */
+button:nth-child(2) { background: #FFC107; color: black; } /* Normal Mode */
+button:nth-child(3) { background: #FF5722; color: white; } /* Hard Mode */
+.difficult-mode {
+color: #800080; /* Purple */
+font-weight: bold;
+font-size: 18px;
+position: relative;
+animation: glitch 0.15s infinite alternate;
+}
+
+@keyframes glitch {
+0% {
+text-shadow: 2px 2px #800080, -2px -2px #ff00ff;
+transform: translate(0, 0);
+}
+20% {
+text-shadow: -2px -2px #800080, 2px 2px #ff00ff;
+transform: translate(-2px, 2px);
+}
+40% {
+text-shadow: 2px -2px #800080, -2px 2px #ff00ff;
+transform: translate(2px, -2px);
+}
+60% {
+text-shadow: -2px 2px #800080, 2px -2px #ff00ff;
+transform: translate(-2px, -2px);
+}
+80% {
+text-shadow: 2px 2px #800080, -2px -2px #ff00ff;
+transform: translate(2px, 2px);
+}
+100% {
+text-shadow: -2px -2px #800080, 2px 2px #ff00ff;
+transform: translate(0, 0);
+}
+}
